@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :reviews
+  resources :attractions
+  resources :cities
+  resources :countries
+  resources :continents
   resources :profiles
   devise_for :users
   root 'landing#page'
