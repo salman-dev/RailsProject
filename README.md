@@ -22,3 +22,13 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+
+TIME LINE
+Day 1 - discussed what the project was gonna be about (22 of march)
+
+day 2 - we created Wireframe on balsamiq and erd using DB Designer and also saved our ERD (23 of march)
+
+day 3 - we started the rails project we added our gems such simple-form, devise , bootstrap and also added cypress for testing.
+
