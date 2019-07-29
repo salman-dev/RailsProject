@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_name: MyString
+  first_name: MyString
+  last_name: MyString
+  user: one
+  subscription: MyString
+  wishlist_counter: 1
+  swipe_counter: 1
+
+two:
+  user_name: MyString
+  first_name: MyString
+  last_name: MyString
+  user: two
+  subscription: MyString
+  wishlist_counter: 1
+  swipe_counter: 1
