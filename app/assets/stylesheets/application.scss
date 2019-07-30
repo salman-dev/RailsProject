@@ -1,1 +1,43 @@
 @import "bootstrap";
+
+
+
+.logo {
+    height: 60px;
+    width: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+
+// sign in and out box 
+.sign-box {
+    background-image: linear-gradient(to left, #fa886d, #8f272e);
+    height: 75vh;
+    width: 65vw;
+    margin: auto;
+    margin-top: 50px;
+    
+    // border radius
+    border-radius: 9px;
+
+    // h1 styling and paragraph within sign box
+        h1{
+            text-align: center;
+            font-size: 5.5em;
+        }
+
+        p{
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+    //  
+    
+}
+
+
+.custom-bg {
+    background: #8f272e;
+}
