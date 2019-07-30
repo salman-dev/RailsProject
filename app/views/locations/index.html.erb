@@ -1,6 +1,6 @@
 <%= form_tag locations_path, :method => :get do %>
   <p>
-    <%= redirect_to "Like", :name => nil %>
+    <%= link_to "Like", attractions_path %>
     <%= submit_tag "Dislike", :name => nil %>
 
   </p>
