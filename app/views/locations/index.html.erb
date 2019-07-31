@@ -1,0 +1,37 @@
+<%= form_tag locations_path, :method => :get do %>
+  <p>
+    <%= link_to "Like", attractions_path %>
+    <%= submit_tag "Dislike", :name => nil %>
+
+  </p>
+<% end %>
+
+
+<%= @random_location.address%>
+
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@random_location.latitude}%2C#{@random_location.longitude}&key=AIzaSyDeYXTNMSbKRjh2dgSd-9uJ_73Z56Tz9-o" %>
+
+
+
+
+
+
+
+<table>
+  <tr>
+    <th>Address</th>
+    
+  </tr>
+  <% for location in @locations %>
+    <tr>
+      <td><%= location.address %></td>
+      <td><% location.latitude %></td>
+      <td><% location.longitude %></td>
+      <td><% link_to "Show", location %></td>
+      <td><% link_to "Edit", edit_location_path(location) %></td>
+      <td><% link_to "Destroy", location, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Location", new_location_path %></p>
