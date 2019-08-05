@@ -14,6 +14,7 @@ class LocationsController < ApplicationController
     
       def show
         @location = Location.find(params[:id])
+        puts @location
       end
     
       def new
