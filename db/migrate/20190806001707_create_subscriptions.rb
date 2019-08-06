@@ -3,7 +3,7 @@ class CreateSubscriptions < ActiveRecord::Migration[5.2]
     create_table :subscriptions do |t|
       t.string :name
       t.text :description
-      t.string :picture
+      t.string :image
       t.string :profile_references
 
       t.timestamps

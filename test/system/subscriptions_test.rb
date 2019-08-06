@@ -15,8 +15,8 @@ class SubscriptionsTest < ApplicationSystemTestCase
     click_on "New Subscription"
 
     fill_in "Description", with: @subscription.description
+    fill_in "Image", with: @subscription.image
     fill_in "Name", with: @subscription.name
-    fill_in "Picture", with: @subscription.picture
     fill_in "Profile references", with: @subscription.profile_references
     click_on "Create Subscription"
 
@@ -29,8 +29,8 @@ class SubscriptionsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Description", with: @subscription.description
+    fill_in "Image", with: @subscription.image
     fill_in "Name", with: @subscription.name
-    fill_in "Picture", with: @subscription.picture
     fill_in "Profile references", with: @subscription.profile_references
     click_on "Update Subscription"
 
