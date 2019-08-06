@@ -17,7 +17,7 @@ class SubscriptionsTest < ApplicationSystemTestCase
     fill_in "Description", with: @subscription.description
     fill_in "Image", with: @subscription.image
     fill_in "Name", with: @subscription.name
-    fill_in "Profile references", with: @subscription.profile_references
+    fill_in "Profile", with: @subscription.profile_id
     click_on "Create Subscription"
 
     assert_text "Subscription was successfully created"
@@ -31,7 +31,7 @@ class SubscriptionsTest < ApplicationSystemTestCase
     fill_in "Description", with: @subscription.description
     fill_in "Image", with: @subscription.image
     fill_in "Name", with: @subscription.name
-    fill_in "Profile references", with: @subscription.profile_references
+    fill_in "Profile", with: @subscription.profile_id
     click_on "Update Subscription"
 
     assert_text "Subscription was successfully updated"

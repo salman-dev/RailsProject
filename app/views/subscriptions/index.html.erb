@@ -8,7 +8,7 @@
       <th>Name</th>
       <th>Description</th>
       <th>Image</th>
-      <th>Profile references</th>
+      <th>Profile</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,7 +19,7 @@
         <td><%= subscription.name %></td>
         <td><%= subscription.description %></td>
         <td><%= subscription.image %></td>
-        <td><%= subscription.profile_references %></td>
+        <td><%= subscription.profile %></td>
         <td><%= link_to 'Show', subscription %></td>
         <td><%= link_to 'Edit', edit_subscription_path(subscription) %></td>
         <td><%= link_to 'Destroy', subscription, method: :delete, data: { confirm: 'Are you sure?' } %></td>
