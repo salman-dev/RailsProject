@@ -1,3 +1,33 @@
-// Place all the styles related to the Attractions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#btn_feature{
+    font-size: 4rem;
+}
+#btn_undo{
+    margin: 0 50px;
+    color: blue;
+}
+#btn_undo:hover{
+    text-decoration: none;
+    color: rgb(0, 183, 255);
+}
+#btn_like{
+    margin: 0 50px;
+    color: green;
+    
+}
+#btn_like:hover{
+    text-decoration: none;
+    color: rgb(0, 255, 76);
+}
+
+#btn_dislike{
+    margin: 0 50px;
+    color: red;
+    border: none;
+}
+#btn_dislike:hover{
+    color: rgb(58, 0, 0);
+    border: none;
+}
+#btn_dislike:focus{
+    outline: 0;
+}

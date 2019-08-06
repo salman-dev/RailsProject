@@ -1,6 +1,7 @@
-@import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Frijole|Sura&display=swap');
-
+@import "bootstrap";
+@import 'locations';
+@import 'attractions';
 // located only in navbar currently
 .logo {
     height: 60px;
@@ -57,3 +58,4 @@
 .custom-bg {
     background: #8f272e;
 }
+
