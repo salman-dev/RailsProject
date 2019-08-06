@@ -18,8 +18,11 @@
       <tr>
         <td><%= subscription.name %></td>
         <td><%= subscription.description %></td>
-        <td><%= subscription.image %></td>
-        <td><%= subscription.profile %></td>
+
+         <td><%= image_tag subscription.image %></td>
+
+        <td><% subscription.profile %></td>
+
         <td><%= link_to 'Show', subscription %></td>
         <td><%= link_to 'Edit', edit_subscription_path(subscription) %></td>
         <td><%= link_to 'Destroy', subscription, method: :delete, data: { confirm: 'Are you sure?' } %></td>
