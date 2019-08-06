@@ -18,7 +18,7 @@ Things you may want to cover:
 
 
 Heroku (published app) -
-(not yet published)
+https://gmitt.herokuapp.com/
 
 GitHub repository 
 https://github.com/salman-dev/RailsProject
@@ -74,7 +74,7 @@ The daruma Classic Gold
 - JavaScript / cypress
 - bootstrap
 - Ruby & Ruby on rails
-- HTML5 & CSS3
+- HTML5 & SCSS
 
 
 
@@ -90,6 +90,10 @@ day 3 - we started the rails project we added our gems such simple-form, devise 
 day 4 - team members worked on their spesific feature the features that were being worked on were profiles, navbar and the main functionality which was a very hard job.
 
 day 5 - 2 members worked on the main functionality to finish this before the deadline while other members gathered photographs and collected images for the presentation.
+
+day 6 - we fixed general issues we had and made small changes
+
+day 7 - 
 
 <u>Not noted in the timeline</u>
 

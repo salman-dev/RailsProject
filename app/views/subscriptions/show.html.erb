@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @subscription.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @subscription.description %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag @subscription.image %>
+</p>
+
+<p>
+  <strong>Profile references:</strong>
+  <%= @subscription.profile_references %>
+</p>
+
+<%= link_to 'Edit', edit_subscription_path(@subscription) %> |
+<%= link_to 'Back', subscriptions_path %>
