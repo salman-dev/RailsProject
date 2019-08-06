@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2019_08_05_005203) do
+=======
+ActiveRecord::Schema.define(version: 2019_08_06_002243) do
+>>>>>>> 8d536cc7aca8238f251336080b200c0c0b3d1989
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,6 +80,16 @@ ActiveRecord::Schema.define(version: 2019_08_05_005203) do
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
+  create_table "subscriptions", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "image"
+    t.bigint "profile_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["profile_id"], name: "index_subscriptions_on_profile_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -91,4 +105,5 @@ ActiveRecord::Schema.define(version: 2019_08_05_005203) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "attractions", "locations"
   add_foreign_key "profiles", "users"
+  add_foreign_key "subscriptions", "profiles"
 end
