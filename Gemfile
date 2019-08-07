@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
+ruby '2.6.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -41,7 +41,8 @@ gem 'simple_form'
 gem 'devise'
 gem 'bootstrap', '~> 4.3.1'
 gem 'geocoder'
-
+# gem 'spree_wishlist', github: 'spree-contrib/spree_wishlist', branch: 'master'
+# gem 'spree_email_to_friend', github: 'spree-contrib/spree_email_to_friend', branch: 'master'
 
 
 
