@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2019_08_05_005203) do
-=======
-ActiveRecord::Schema.define(version: 2019_08_06_002243) do
->>>>>>> 8d536cc7aca8238f251336080b200c0c0b3d1989
+ActiveRecord::Schema.define(version: 2019_08_08_133244) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,7 +60,6 @@ ActiveRecord::Schema.define(version: 2019_08_06_002243) do
     t.float "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "picture"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -102,8 +97,30 @@ ActiveRecord::Schema.define(version: 2019_08_06_002243) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "wish_lists", force: :cascade do |t|
+    t.bigint "profile_id"
+    t.bigint "attraction_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["attraction_id"], name: "index_wish_lists_on_attraction_id"
+    t.index ["profile_id"], name: "index_wish_lists_on_profile_id"
+  end
+
+  create_table "wishlists", force: :cascade do |t|
+    t.bigint "profile_id"
+    t.bigint "attraction_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["attraction_id"], name: "index_wishlists_on_attraction_id"
+    t.index ["profile_id"], name: "index_wishlists_on_profile_id"
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "attractions", "locations"
   add_foreign_key "profiles", "users"
   add_foreign_key "subscriptions", "profiles"
+  add_foreign_key "wish_lists", "attractions"
+  add_foreign_key "wish_lists", "profiles"
+  add_foreign_key "wishlists", "attractions"
+  add_foreign_key "wishlists", "profiles"
 end
