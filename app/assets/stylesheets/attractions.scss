@@ -1,33 +1,22 @@
-#btn_feature{
+
+
+
+.attraction_name{
     font-size: 4rem;
 }
-#btn_undo{
-    margin: 0 50px;
-    color: blue;
-}
-#btn_undo:hover{
-    text-decoration: none;
-    color: rgb(0, 183, 255);
-}
-#btn_like{
-    margin: 0 50px;
-    color: green;
+
+
+#img_attraction{
     
-}
-#btn_like:hover{
-    text-decoration: none;
-    color: rgb(0, 255, 76);
+    font-size: 1.9rem;
 }
 
-#btn_dislike{
-    margin: 0 50px;
-    color: red;
-    border: none;
-}
-#btn_dislike:hover{
-    color: rgb(58, 0, 0);
-    border: none;
-}
-#btn_dislike:focus{
-    outline: 0;
+
+
+
+#description_attraction{
+    
+    font-size: 25px;
+    margin: 0 150px;
+    margin-bottom: 50px;
 }

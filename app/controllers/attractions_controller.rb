@@ -6,11 +6,33 @@ class AttractionsController < ApplicationController
   def index
     @attractions = Attraction.all
     
+    @random_attraction = Attraction.all.sample
+    # @random_attraction = Attraction.all.sample
+    @location = Location.find_by(id: params[:id])
+    @correct_location = @location.attractions
+    @attraction_random = Attraction.find(params[:id])
+  
   end
+  # @location = Location.find_by(id: params[:id])
+  # @attraction = .find_by(id: params[:id])
+  # location = Location.find_by(:name)
+
+
+#   foreach attraction in Attractions.all
+#   if attraction.location == goodLocation
+#       goodAttractions << attraction 
+#       // push correct attraction into new attraction array
+#   end
+# end 
+
+
+
+
 
   # GET /attractions/1
   # GET /attractions/1.json
   def show
+    @attraction = Attraction.find_by(id: params[:id])
   end
 
   # GET /attractions/new
@@ -70,6 +92,6 @@ class AttractionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def attraction_params
-      params.require(:attraction).permit(:name, :description, :picture, :location_id)
+      params.require(:attraction).permit(:name, :description, :location_id, pictures: [])
     end
 end
