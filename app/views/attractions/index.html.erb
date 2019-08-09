@@ -1,57 +1,66 @@
+<p id="notice"><%= notice %></p>
+
+<% x = [0,1,2,3,4].sample%>
 
 
-<h1>Attractions</h1>
-
-<id="attraction_btn">
+<div class="attraction_name">
 <div class="d-flex justify-content-center">
+<%= @correct_location[x].name %>
+</div>
+</div>
 
+<div id="img_attraction">
+<div class="d-flex justify-content-center">
+<%= image_tag @correct_location[x].pictures.first %>
+</div>
+</div>
+
+<div id="description_attraction">
+<div class="d-flex justify-content-start">
+<%=  @correct_location[x].description %>
+</div>
+</div>
+
+<div class="btn_feature">
+<div id="attraction_btn">
+<div class="d-flex justify-content-center">
+<%= form_tag attractions_path, :method => :get do %>
   
     <div id="btn_feature">
-    <%= link_to :back, id: "btn_undo" do %>
+    <%= link_to locations_path, class: "btn_undo" do %>
     <i class="fas fa-undo"></i>
     <% end %>
 
-
-    <%= link_to   attractions_path,id: "btn_like" do %>
+    
+    <%= link_to  attractions_index_path(@attraction_random), class: "btn_like" do %>
     <i class="fas fa-thumbs-up"></i>
     <% end %>
     
-   
-  <%= button_tag type: 'submit', id: "btn_dislike" do %>
+   <%# attractions_index_path(@attraction_random) %>
+    <%= link_to  attractions_index_path(@attraction_random), class: "btn_dislike" do %>
     
     <i class="fas fa-thumbs-down"></i>
     <% end %>
     </div>
   
-
+<% end %>
 </div>
 </div>
-
-
-
-
+</div>
 
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Picture</th>
-      <th>Location</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  
 
   <tbody>
     <% @attractions.each do |attraction| %>
       <tr>
-        <td><%= attraction.name %></td>
-        <td><%= attraction.description %></td>
-        <td><%= attraction.picture %></td>
-        <td><%= attraction.location %></td>
-        <td><%= link_to 'Show', attraction %></td>
-        <td><%= link_to 'Edit', edit_attraction_path(attraction) %></td>
-        <td><%= link_to 'Destroy', attraction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><% attraction.name %></td>
+        <td><% attraction.description %></td>
+        <td><% attraction.picture %></td>
+        <td><% attraction.location %></td>
+        <td><% link_to 'Show', attraction %></td>
+        <td><% link_to 'Edit', edit_attraction_path(attraction) %></td>
+        <td><% link_to 'Destroy', attraction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -59,4 +68,4 @@
 
 <br>
 
-<%= link_to 'New Attraction', new_attraction_path %>
+<% link_to 'New Attraction', new_attraction_path %>

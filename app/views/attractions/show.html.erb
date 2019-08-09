@@ -11,8 +11,9 @@
 </p>
 
 <p>
-  <strong>Picture:</strong>
-  <%= @attraction.picture %>
+  <% @attraction.pictures.each do |picture|%>
+    <%= image_tag picture %>
+    <% end %>
 </p>
 
 <p>

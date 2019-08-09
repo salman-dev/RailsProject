@@ -6,7 +6,7 @@
   <div class="form-inputs">
     <%= f.input :name %>
     <%= f.input :description %>
-    <%= f.input :picture %>
+    <%= f.file_field :pictures, multiple: true %>
     <%= f.association :location %>
   </div>
 

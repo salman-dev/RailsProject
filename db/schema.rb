@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2019_08_05_005203) do
-=======
-ActiveRecord::Schema.define(version: 2019_08_06_002243) do
->>>>>>> 8d536cc7aca8238f251336080b200c0c0b3d1989
+ActiveRecord::Schema.define(version: 2019_08_09_081128) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,21 +46,12 @@ ActiveRecord::Schema.define(version: 2019_08_06_002243) do
     t.index ["location_id"], name: "index_attractions_on_location_id"
   end
 
-  create_table "downloads", force: :cascade do |t|
-    t.string "ip"
-    t.float "latitude"
-    t.float "longitude"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "locations", force: :cascade do |t|
-    t.string "address"
-    t.float "latitude"
-    t.float "longitude"
+    t.string "name"
+    t.text "description"
+    t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "picture"
   end
 
   create_table "profiles", force: :cascade do |t|
