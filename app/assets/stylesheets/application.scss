@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Frijole|Sura&display=swap');
 @import "bootstrap";
-
 @import 'subscriptions';
+@import 'locations';
+@import 'attractions';
+
 
 // located only in navbar currently
 .logo {
@@ -66,3 +68,4 @@
     border-color: #00885a;
     border-radius: 5px !important;
 }
+

@@ -1,6 +1,34 @@
-<p id="notice"><%= notice %></p>
+
 
 <h1>Attractions</h1>
+
+<id="attraction_btn">
+<div class="d-flex justify-content-center">
+
+  
+    <div id="btn_feature">
+    <%= link_to :back, id: "btn_undo" do %>
+    <i class="fas fa-undo"></i>
+    <% end %>
+
+
+    <%= link_to   attractions_path,id: "btn_like" do %>
+    <i class="fas fa-thumbs-up"></i>
+    <% end %>
+    
+   
+  <%= button_tag type: 'submit', id: "btn_dislike" do %>
+    
+    <i class="fas fa-thumbs-down"></i>
+    <% end %>
+    </div>
+  
+
+</div>
+</div>
+
+
+
 
 
 <table>

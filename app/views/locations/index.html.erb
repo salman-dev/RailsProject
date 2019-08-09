@@ -1,17 +1,44 @@
-<%= form_tag locations_path, :method => :get do %>
-  <p>
-    <%= link_to "Like", attractions_path %>
-    <%= submit_tag "Dislike", :name => nil %>
 
-  </p>
-<% end %>
-
-
+<div class="location_name">
+<div class="d-flex justify-content-center">
 <%= @random_location.address%>
+</div>
+</div>
 
+
+<div class="main">
+<div class="d-flex justify-content-start">
+<div id="google_map">
 <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@random_location.latitude}%2C#{@random_location.longitude}&key=AIzaSyDeYXTNMSbKRjh2dgSd-9uJ_73Z56Tz9-o" %>
+</div>
+</div>
+</div>
 
 
+<id="location_btn">
+<div class="d-flex justify-content-center">
+<%= form_tag locations_path, :method => :get do %>
+  
+    <div id="btn_feature">
+    <%= link_to :back, id: "btn_undo" do %>
+    <i class="fas fa-undo"></i>
+    <% end %>
+
+
+    <%= link_to  attractions_path, id: "btn_like" do %>
+    <i class="fas fa-thumbs-up"></i>
+    <% end %>
+    
+   
+  
+    <%= button_tag type: 'submit', id: "btn_dislike" do %>
+    <i class="fas fa-thumbs-down"></i>
+    <% end %>
+    </div>
+  
+<% end %>
+</div>
+</div>
 
 
 
