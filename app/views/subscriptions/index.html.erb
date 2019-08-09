@@ -1,19 +1,17 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
+  <div class="container">
+    <h1>Subscriptions</h1>
+  </div>
 
-<h1>Subscriptions</h1>
-
-<table>
-
-
-  <tbody>
+  <div class="container row">
+    
     <% @subscriptions.each do |subscription| %>
-      <div class="container">
-
-        
-        <div class="card" style="width: 18rem;">
-          <%= subscription.name %>
-          <%= image_tag subscription.image, class:"card-img-top" %>
+    
+      <div class="card col-sm ml-5" style="width: 18rem;">
+        <%= subscription.name %>
+        <%= image_tag subscription.image, class:"card-img-top" %>
           <div class="card-body">
             <p class="card-text"><%= subscription.description %></p>
           </div>
@@ -21,14 +19,12 @@
         <%= link_to 'Edit', edit_subscription_path(subscription) %>
         <%= link_to 'Destroy', subscription, method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
-        
-    </div>
-    <% end %>
-  </tbody>
-</table>
+          <% end %>
+      </div>
+  </div>
+  <br>
+</div>
 
-<br>
-
-<%= link_to 'New Subscription', new_subscription_path %>
+  <%= link_to 'New Subscription', new_subscription_path %>
 
 

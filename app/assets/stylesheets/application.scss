@@ -59,3 +59,10 @@
 .custom-bg {
     background: #00885a;
 }
+
+
+.card-body {
+    width: inherit;
+    border-color: #00885a;
+    border-radius: 5px !important;
+}

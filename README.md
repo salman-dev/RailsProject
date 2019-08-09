@@ -55,14 +55,14 @@ starting from the basic daruma plan (basic)
 
 The daruma arcade rainbow plan aka the daruma plus
 
-- Increased bookmark storage (limit increased by 10) Can store up to 15 things
-- Increased Like/save places (limit increased by 10) Can store up to 15 things
+- Increased bookmark storage (limit increased by 10) Can now store up to 15 things
+- Increased Like/save places (limit increased by 10) Can now store up to 15 things
 - keeps every feature the previous plan had
 
 The daruma Classic Gold
 
-- Increased bookmark storage (limit increased by 15) Can store up to 30 things
-- Increased Like/save places (limit increased by 15) Can store up to 30 things
+- Increased bookmark storage (limit increased by 15) Can now store up to 30 things
+- Increased Like/save places (limit increased by 15) Can now store up to 30 things
 - Border around profile is gold!!! and can be seen by other people also when leaving a review people will see a golden border around you.
 - also receives a golden badge!! that is kept permanently even after subscription runs out.
 - keeps every feature the previous plan had
