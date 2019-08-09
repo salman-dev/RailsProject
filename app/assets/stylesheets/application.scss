@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Frijole|Sura&display=swap');
 @import "bootstrap";
+@import 'subscriptions';
 @import 'locations';
 @import 'attractions';
+
+
 // located only in navbar currently
 .logo {
     height: 60px;
@@ -58,3 +61,11 @@
 .custom-bg {
     background: #00885a;
 }
+
+
+.card-body {
+    width: inherit;
+    border-color: #00885a;
+    border-radius: 5px !important;
+}
+
