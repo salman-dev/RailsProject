@@ -26,12 +26,13 @@
 
 .btn_dislike{
     margin: 0 50px;
-    color: red;
+    color: rgb(255, 1, 1);
     border: none;
 }
 .btn_dislike:hover{
-    color: rgb(58, 0, 0);
+    color: rgb(0, 0, 0);
     border: none;
+    
 }
 .btn_dislike:focus{
     outline: 0;
