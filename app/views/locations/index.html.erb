@@ -13,10 +13,11 @@
 </div>
 </div>
 
-
+<div id="location_border">
 <div id="description_location">
 <div class="d-flex justify-content-start">
 <%=  @random_location.description %>
+</div>
 </div>
 </div>
 
@@ -52,12 +53,12 @@
   <tbody>
     <% @locations.each do |location| %>
       <tr>
-        <td><% location.name %></td>
+        <td><%= location.name %></td>
         <td><% location.description %></td>
         
         <td><% link_to 'Show', location %></td>
-        <td><% link_to 'Edit', edit_location_path(location) %></td>
-        <td><% link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_location_path(location) %></td>
+        <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
