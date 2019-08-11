@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'contact/page'
   get '/attractions/:id', to: 'attractions#index', as: 'attractions_index'
   resources :attractions
   resources :locations
