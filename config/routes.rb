@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'contact/page'
   # get '/attractions/:id', to: 'attractions#index', as: 'attractions_index'
-  get '/subscriptions' => 'subscription#index', 'as: :add_payment_method'
+  # get '/subscriptions' => 'subscription#index'
 
   resources :attractions
   resources :locations

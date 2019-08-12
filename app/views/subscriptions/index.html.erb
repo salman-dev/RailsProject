@@ -19,6 +19,21 @@
         <%= link_to 'Edit', edit_subscription_path(subscription) %>
         <%= link_to 'Destroy', subscription, method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
+          <form action="/payment" method="POST">
+            <script>
+              src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
+              data-amount="1000"
+              data-name="Stripe.com"
+              data-description="Widget"
+              data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+              data-locale="auto"
+              data-zip-code="true"
+              data-currency="AUD"
+              data-email="pllip@test.com"
+            </script>
+            <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+          </form>
           <% end %>
       </div>
   </div>
@@ -26,23 +41,7 @@
 </div>
 
 
-<form action="/payment" method="POST">
-  <script
-    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
-    data-amount="1000"
-    data-name="Stripe.com"
-    data-description="Widget"
-    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-    data-locale="auto"
-    data-zip-code="true"
-    data-currency="AUD"
-    data-email="phlip@test.com"
-    >
-  </script>
-  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 
-</form>
 
   <%= link_to 'New Subscription', new_subscription_path %>
 
