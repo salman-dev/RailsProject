@@ -209,8 +209,7 @@ Q5- Identify and describe the software to be used in your App.
 
 Q6- Identify the database to be used in your App and provide a justification for your choice.
 
-    The database that we decided to use was PostgreSQL, because of its object-relational ability which gave it an advantage over other open sourse SQL databases. Biggest advantage for object-relational date bases is the aid they give to users in defining objects and their behavior, which makes PostgreSQL very adaptable. It also allows the user to create complicated data designs, store and review them.
-    !!ADD CONS!!
+    The database that we decided to use was PostgreSQL, because of its object-relational ability which gave it an advantage over other open sourse SQL databases. Biggest advantage for object-relational date bases is the aid they give to users in defining objects and their behavior, which makes PostgreSQL very adaptable. It also allows the user to create complicated data designs, store and review them. Some of the cons for postgresql is that it can have slower performance than mySQL, and that it has a smaller community group than that of mySQL, so it might be a little harder to get the help needed.
 
 Q7- Identify and describe the production database setup (i.e. postgres instance).
 
@@ -264,4 +263,24 @@ Q17- Describe the way tasks are allocated and tracked in your project.
 
 Q18- Discuss how Agile methodology is being implemented in your project.
 
-    
+    Agile methodology was used in our projects when the standup meetings were conducted, where each group member spoke about what they have done the day before, what their plan for the day is and what are some issues they are facing. And making sure that each team member is on track and are all going at the same pace in working on the project.
+
+Q19- Provide an overview and description of your Source control process.
+
+    For our source control, we decided to use github due to the fact that it allowed us to use the different branches feature, where each person was able to work on their part of the code, then push it, which is then followed by a pull request which is used to merge our branch with the 'dev' branch that we decided should be our main branch. After this, the pull request was reviewed by another group member to check if there was any clashes in coded that would have resulted in breaking the app, in that case, the group member was asked to fix their code and re-push. When the code is reviewed by the second member and is merged, other members would pull so they would be able to stay on track and on the same pace as eachother.
+
+Q20- Provide an overview and description of your Testing process.
+
+    For the testing proces, we have decided to use cypress which allowed us to test our app faster and more effeciently, due to its ability to go through every web page in the app in a minimal time. We later discovered that cypress has a feature which allows to aumatically test any new data added to the app, which in return increased our effiency as we didnt have to go through the app every single time.
+
+Q21- Discuss and analyse requirements related to information system security.
+
+    The requirement needed to make sure we have a secure system sucuirity, was limiting the users to only view their profile, location, attraction and a brief description about the attraction. This prevented unautharised access from users who would have changed information regarding some attractions, and made sure that users are to only view and save the places they wish to visit, or delete if not. We have also used devise which included a built-in encyprtion feature for the users passwords, where it also makes sure that the password is not saved in our database, which is important for the users secuirity.
+
+Q22- Discuss methods you will use to protect information and data.
+
+    The method we used to protect information and data was devise, which allowed authentication of the user before allowing them to login. This was essential to protect our users who have their credit card information saved on their profile from having it stolen by someone else by not allowing them to access an account if the e-mail and password were not put in correcty. we have also created our own secuirity system where we checked if user was logged in before making any purchases e.g. subscribing to the premium.
+
+Q23- Research what your legal obligations are in relation to handling user data.
+
+    Some of the legal obligations that we have faced in handling our user data was that we needed to make sure that the personal information provided by our users was secured and will not be accessed by anyone else, for example, their credit card details which counts as a sensitive information that some people might try to steal. 
