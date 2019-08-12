@@ -1,33 +1,30 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<h1>Subscriptions</h1>
+  <div class="container">
+    <h1>Subscriptions</h1>
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image</th>
-      <th>Profile</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+  <div class="container row">
+    
     <% @subscriptions.each do |subscription| %>
-      <tr>
-        <td><%= subscription.name %></td>
-        <td><%= subscription.description %></td>
-        <td><%= subscription.image %></td>
-        <td><%= subscription.profile %></td>
-        <td><%= link_to 'Show', subscription %></td>
-        <td><%= link_to 'Edit', edit_subscription_path(subscription) %></td>
-        <td><%= link_to 'Destroy', subscription, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    
+      <div class="card col-sm ml-5" style="width: 18rem;">
+        <%= subscription.name %>
+        <%= image_tag subscription.image, class:"card-img-top" %>
+          <div class="card-body">
+            <p class="card-text"><%= subscription.description %></p>
+          </div>
+          <%= link_to 'Show', subscription %>
+        <%= link_to 'Edit', edit_subscription_path(subscription) %>
+        <%= link_to 'Destroy', subscription, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+          <% end %>
+      </div>
+  </div>
+  <br>
+</div>
 
-<br>
+  <%= link_to 'New Subscription', new_subscription_path %>
 
-<%= link_to 'New Subscription', new_subscription_path %>
+

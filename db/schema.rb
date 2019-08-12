@@ -57,7 +57,6 @@ ActiveRecord::Schema.define(version: 2019_08_12_033542) do
     t.string "first_name"
     t.string "last_name"
     t.bigint "user_id"
-    t.string "subscription"
     t.integer "wishlist_counter"
     t.integer "swipe_counter"
     t.datetime "created_at", null: false
@@ -87,8 +86,19 @@ ActiveRecord::Schema.define(version: 2019_08_12_033542) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "wishlists", force: :cascade do |t|
+    t.bigint "profile_id"
+    t.bigint "attraction_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["attraction_id"], name: "index_wishlists_on_attraction_id"
+    t.index ["profile_id"], name: "index_wishlists_on_profile_id"
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "attractions", "locations"
   add_foreign_key "profiles", "users"
   add_foreign_key "subscriptions", "profiles"
+  add_foreign_key "wishlists", "attractions"
+  add_foreign_key "wishlists", "profiles"
 end

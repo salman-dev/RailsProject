@@ -1,4 +1,4 @@
-
+  
 <%= simple_form_for(@subscription) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -8,7 +8,7 @@
     <%= f.input :description %>
     <%= f.file_field :image %>
     <br><br>
-    <%= f.association :profile %>
+    <% f.association :profile %>
   </div>
 
   <div class="form-actions">

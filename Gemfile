@@ -42,6 +42,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'bootstrap', '~> 4.3.1'
 gem 'geocoder'
+gem 'stripe'
 
 
 
