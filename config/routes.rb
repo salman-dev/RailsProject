@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :wishlists
   get 'contact/page'
   get '/attractions/:id', to: 'attractions#index', as: 'attractions_index'
   resources :attractions
