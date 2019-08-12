@@ -14,17 +14,32 @@
         <%= image_tag subscription.image, class:"card-img-top" %>
           <div class="card-body">
             <p class="card-text"><%= subscription.description %></p>
+            <form action="/payment" method="POST">
+    <% puts subscription.price %>
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_ZNz8PLK8Qhk6uL826Xi7KkN400jTw9J7O2"
+    data-amount="<%= subscription.price * 100 %>"
+    data-name="Stripe.com"
+    data-description="Total cost <% subscription.price * 100 %>"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-locale="auto"
+    data-zip-code="true"
+    data-currency="AUD"
+    data-email="philip@test.com">
+  </script>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  </form>
           </div>
-          <%= link_to 'Show', subscription %>
-        <%= link_to 'Edit', edit_subscription_path(subscription) %>
-        <%= link_to 'Destroy', subscription, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% link_to 'Show', subscription %>
+          <% link_to 'Edit', edit_subscription_path(subscription) %>
+          <% link_to 'Destroy', subscription, method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
           <% end %>
       </div>
   </div>
   <br>
+
 </div>
 
-  <%= link_to 'New Subscription', new_subscription_path %>
-
-
+  <% link_to 'New Subscription', new_subscription_path %>

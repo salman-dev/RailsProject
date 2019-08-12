@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 2019_08_12_070400) do
     t.bigint "profile_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "price"
     t.index ["profile_id"], name: "index_subscriptions_on_profile_id"
   end
 
