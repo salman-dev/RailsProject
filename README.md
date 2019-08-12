@@ -1,3 +1,5 @@
+
+
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -103,7 +105,53 @@ After creating the base of the application we added more features and a bit of s
 
 **<u>A workflow diagram of user journey</u>**
 
+we did this using Trello board we had user stories
+
+
+
 <u>**Wire Frames**</u>
+
+![wireframe1](https://github.com/salman-dev/RailsProject/blob/dev/wireframe%20screenshots/wireframe1.png)
+
+![wireframe2](https://github.com/salman-dev/RailsProject/blob/dev/wireframe%20screenshots/Wireframe2.png)
+
+![wireframe3](https://github.com/salman-dev/RailsProject/blob/dev/wireframe%20screenshots/Wireframe3.png)
+
+![wireframe4](https://github.com/salman-dev/RailsProject/blob/dev/wireframe%20screenshots/Wireframe4.png)
+
+![wireframe5](https://github.com/salman-dev/RailsProject/blob/dev/wireframe%20screenshots/Wireframe5.png)
+
+![wireframe6](https://github.com/salman-dev/RailsProject/blob/dev/wireframe%20screenshots/Wireframe6.png)
+
+![wireframe7](https://github.com/salman-dev/RailsProject/blob/dev/wireframe%20screenshots/Wireframe7.png)
+
+![wireframe8](https://github.com/salman-dev/RailsProject/blob/dev/wireframe%20screenshots/Wireframe8.png)
+
+![wireframe9](https://github.com/salman-dev/RailsProject/blob/dev/wireframe%20screenshots/Wireframe9.png)
+
+![wireframe10](https://github.com/salman-dev/RailsProject/blob/dev/wireframe%20screenshots/Wireframe11.png)
+
+![wireframe11](https://github.com/salman-dev/RailsProject/blob/dev/wireframe%20screenshots/Wireframe12.png)
+
+![wireframe12](https://github.com/salman-dev/RailsProject/blob/dev/wireframe%20screenshots/Wireframe13.png)
+
+![wireframe13](https://github.com/salman-dev/RailsProject/blob/dev/wireframe%20screenshots/Wireframe14.png)
+
+![wireframe14](https://github.com/salman-dev/RailsProject/blob/dev/wireframe%20screenshots/Wireframe15.png)
+
+![wireframe15](https://github.com/salman-dev/RailsProject/blob/dev/wireframe%20screenshots/Wireframe16.png)
+
+![wireframe16](https://github.com/salman-dev/RailsProject/blob/dev/wireframe%20screenshots/Wireframe17.png)
+
+![wireframe17](https://github.com/salman-dev/RailsProject/blob/dev/wireframe%20screenshots/Wireframe18.png)
+
+![wireframe18](https://github.com/salman-dev/RailsProject/blob/dev/wireframe%20screenshots/Wireframe19.png)
+
+
+
+
+
+
 
 
 
