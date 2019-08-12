@@ -12,7 +12,7 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item active ">
+      <li class="nav-item active ml-3">
           <% if user_signed_in? %>
             <%= link_to 'Sign out', destroy_user_session_path, :class => 'text-light '%>
           <% else %>
@@ -22,6 +22,14 @@
 
       <li>
         <%# <%= link_to 'Location', location_path %> %>
+
+      <li class="nav-item active ml-3 ">
+        <%= link_to 'Locations page', root_path , :class => 'text-light '%>
+      </li>
+
+      <li class="nav-item active ml-3">
+        <%= link_to 'Locations page', root_path , :class => 'text-light '%>
+
       </li>
     </ul>
 

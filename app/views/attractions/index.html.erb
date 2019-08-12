@@ -11,7 +11,7 @@
 
 <div id="img_attraction">
 <div class="d-flex justify-content-center">
-<%= image_tag @correct_location[x].pictures.first %>
+<%= image_tag @correct_location[x].pictures.first   %>
 </div>
 </div>
 
@@ -59,7 +59,7 @@
       <tr>
         <td><% attraction.name %></td>
         <td><% attraction.description %></td>
-        <td><% attraction.picture %></td>
+        <td><% attraction.pictures.first %></td>
         <td><% attraction.location %></td>
         <td><% link_to 'Show', attraction %></td>
         <td><% link_to 'Edit', edit_attraction_path(attraction) %></td>
