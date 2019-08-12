@@ -131,3 +131,31 @@ day 7 -
 <u>Not noted in the timeline</u>
 
 Time line was done at the end of everyday testing were done at the very end of each feature.
+
+
+Q1- What is the need (i.e. challenge) that you will be addressing in your project?
+
+    In this project, we will be aiming at travellers who are being introduced to new countries/cities and they dont know the attraction sites or best places to eat (because come on, who doesn't love a good feed?). we will also be helping out couples who are looking for date ideas, or individuals planning family trips. in addittion to helping out businesses who are looking forward to expand their profit margin by having them included in our app for people to visit.
+
+Q2- Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?
+
+    This app will be aiming at people who are bored and tired of searching up new places to visit by limiting their searches to one screen. it will assist them in exploting new restaurants to eat, or find new adventures and experiences that they havn't had before! This problem needs solving because most of the future generations end up canceling their outings due to them not being able to plan or their lack of ability in searching places which end up causing a mental impact on them. 
+
+Q3- Describe the project will you be conducting and how. your App will address the needs.
+
+Q4- Describe the network infrastructure the App may be based on.
+
+The app will be based on the infastructure of tinder, where the user will be swiping left to dislike(skip) or right to like(save) the attraction. the app will be a bit different from tinder in the sense where the attraction will save straight away after liking and there is no one on the other side that will be swiping on your profile. 
+
+Q5- Identify and describe the software to be used in your App.
+
+the softwares that we used while developing the app were; dbdesigner to assist us in designing the back-end side of the app where it visualised the links between the tables, balsamiq which we used to create a sketch the front-end design of how the website should look like throughout the differernt pages on both platforms(phone and computer). We also used cypress in order to automatically test that our app is working, then heroku to deploy it and make it go live,we used github and their branches feature to be able to each do our part without breaking eachothers code, and slack was used for communication.
+
+Q6- Identify the database to be used in your App and provide a justification for your choice.
+
+The database that we decided to use was PostgreSQL, because of its object-relational ability which gave it an advantage over other open sourse SQL databases. Biggest advantage for object-relational date bases is the aid they give to users in defining objects and their behavior, which makes PostgreSQL very adaptable. It also allows the user to create complicated data designs, store and review them.
+!!ADD CONS!!
+
+Q7- Identify and describe the production database setup (i.e. postgres instance).
+
+    PostgreSQL is a database server, 
