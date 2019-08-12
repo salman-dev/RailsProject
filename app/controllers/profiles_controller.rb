@@ -33,9 +33,9 @@ class ProfilesController < ApplicationController
     @profile = Profile.new(profile_params)
     if @profile.save
       session[:profile_id] = @profile.id
-      redirect_to '/'
+      redirect_to :back
     else
-      render 'new'
+      render "new"
     end
 
     # respond_to do |format|
