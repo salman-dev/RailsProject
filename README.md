@@ -141,21 +141,73 @@ Q2- Identify the problem you’re trying to solve by building this particular ma
 
     This app will be aiming at people who are bored and tired of searching up new places to visit by limiting their searches to one screen. it will assist them in exploting new restaurants to eat, or find new adventures and experiences that they havn't had before! This problem needs solving because most of the future generations end up canceling their outings due to them not being able to plan or their lack of ability in searching places which end up causing a mental impact on them. 
 
-Q3- Describe the project will you be conducting and how. your App will address the needs.
+Q3- Describe the project you will be conducting and how your App will address the needs.
+
+    This project will mainly be aiming at the issues mentioned in the above question. Our app will address these needs by giving people a chance to easily find places that they want to go to based on the area they are in or the location they want to travel to.
 
 Q4- Describe the network infrastructure the App may be based on.
 
-The app will be based on the infastructure of tinder, where the user will be swiping left to dislike(skip) or right to like(save) the attraction. the app will be a bit different from tinder in the sense where the attraction will save straight away after liking and there is no one on the other side that will be swiping on your profile. 
+    The network infastructure our app is based on would be github where it allowed us to connect our codes through their repository feature which allowed us  to use different brances to push our code to and be able to merge them all together at the end when we are confident that they will work together.
 
 Q5- Identify and describe the software to be used in your App.
 
-the softwares that we used while developing the app were; dbdesigner to assist us in designing the back-end side of the app where it visualised the links between the tables, balsamiq which we used to create a sketch the front-end design of how the website should look like throughout the differernt pages on both platforms(phone and computer). We also used cypress in order to automatically test that our app is working, then heroku to deploy it and make it go live,we used github and their branches feature to be able to each do our part without breaking eachothers code, and slack was used for communication.
+    the softwares that we used while developing the app were; dbdesigner to assist us in designing the back-end side of the app where it visualised the links between the tables, balsamiq which we used to create a sketch the front-end design of how the website should look like throughout the differernt pages on both platforms(phone and computer). We also used cypress in order to automatically test that our app is working, then heroku to deploy it and make it go live,we used github and their branches feature to be able to each do our part without breaking eachothers code, slack was used for communication, stripe was used for payment methods, and devise for the authentication of users.
 
 Q6- Identify the database to be used in your App and provide a justification for your choice.
 
-The database that we decided to use was PostgreSQL, because of its object-relational ability which gave it an advantage over other open sourse SQL databases. Biggest advantage for object-relational date bases is the aid they give to users in defining objects and their behavior, which makes PostgreSQL very adaptable. It also allows the user to create complicated data designs, store and review them.
-!!ADD CONS!!
+    The database that we decided to use was PostgreSQL, because of its object-relational ability which gave it an advantage over other open sourse SQL databases. Biggest advantage for object-relational date bases is the aid they give to users in defining objects and their behavior, which makes PostgreSQL very adaptable. It also allows the user to create complicated data designs, store and review them.
+    !!ADD CONS!!
 
 Q7- Identify and describe the production database setup (i.e. postgres instance).
 
-    PostgreSQL is a database server, 
+    PostgreSQL is a database server. for a client application to be able to access a database it connects to a running postgres instance where it then starts a seperate server process to handle the connection. One of the postgres instances features is to manage the data of one database cluster only. When postgres starts it needs to know the location of the data area.
+
+Q8- Describe the architecture of your App.
+
+    Our app was designed using rails, where we were able to use the conventional MVC (Model, View, Controller) layout designed for our convenience. This gave us the ability to create the different pages in the app with each having its own unique functionality. These different layouts are connected to eachother through their features, where the model uses the data saved in the database, view is responsible for the design of the page which is what the user sees, and the controller is the logic of the webpage where it tells the model what data to use once the user presses a button.
+
+Q9- Explain the different high-level components (abstractions) in your App.
+
+    This app goes through different stages, where one of them takes you to a location that you wish to visit, or the location you are at now. the second stage of the app is to show the user different attractions in the respective location in which the user might want to visit. third  stage of the app is where the wishlist comes in where the user has the choice of adding attractions that he wishes to visit to it, or delete attractions that he no longer wishes to go to, or already did. An additional stage in the app, subsctriptions where the user has to pay money to recieve the full functionality of being able to save as many attractions as he wants to the wishlist, and get unlimited amount of swipes.
+
+Q10- Detail any third party services that your App will use.
+
+    Some of the third party services that were used in this app were stripe, devise, and simple form. Stripe was an essential part of the project as it allowed us to create the payment method needed for the subscription feature, where it also gave us a card number in order to test our feature out. Devise was used for user authentication, where it taken the users e-mail and password and saves them to its database which then compares and authenticate that its the same password used for its corresponding email next time when attempting to login. Simple form was used for the user to be able to create their profile, where it allowed us to receive the information needed about them in order to compelete their profile, while being able to limit the amount of times they swipe.
+
+Q11- Describe (in general terms) the data structure of marketplace apps that are similar to your own (e.g. eBay, Airbnb).
+
+    Airbnb has a generally similar marketplace structure to our app, where they show you different activities/places to stay in different locations around the world. they also give their users the ability to save those activities they wish to be a part of, or the places they need to stay at, in their wishlist page. 
+
+Q12- Discuss the database relations to be implemented.
+
+    The main function of our app is the users ability to swipe left (to dislike/delete) or right (to save and add to wishlist), from the attractions table, which then moves the liked attraction to the wishlist table for the user to review at a later time. Some other funtionalities that we had in our app was the subscription which gives the user the ability to increase their swipe counter(limit to 5) to become ulimited, and allowing them to remove the limit (5) on the amount of attractions the user can save in their wishlist
+
+Q13- Describe your project’s models in terms of the relationships (active record associations) they have with each other.
+
+    The models we have used in our app have been linked to eachother which allowed the app to work. These links are as follows:
+        1. attractions which belongs_to location and has_many pictures, each attraction will include many pictures which will also belong to the location model
+        2. location model which has_many attractions and has_many pictures attached to it. 
+        3. the profile model which belongs_to user and has_one subscription. each user profile will be able to subscribe to only one of the pakcages at once. while belonging to the user
+        4. the subscriptions model which belongs_to profile, however it is optional for usersr to subscribe to any of the packages with limited access,and has_one image attached to it.
+        5. the user model, this is linked to devise which as mentioned above, is used to authenticate when the user signs in. and each user has_one profile.
+        6. the wishlist model which belongs_to both the profile and attractions models
+
+Q14- Provide your database schema design.
+
+    Schema design was provided  above.
+
+Q15- Provide User stories for your App.
+
+    user stories were provided above.
+
+Q16- Provide Wireframes for your App.
+
+    wireframe screenshots were provided aboce.
+
+Q17- Describe the way tasks are allocated and tracked in your project.
+
+    The tasks were allocated based on each group members personal skills. It was discussed during the planning stage were we each explained our weak and strong point, which then was followed by distributing the tasks based on it and agreeed up on by group members. These tasks were later tracked using trello where we created a board for this project, where we added each persons role, with additional lists incase someone needed any assistance in their part.
+
+Q18- Discuss how Agile methodology is being implemented in your project.
+
+    
