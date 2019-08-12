@@ -3,20 +3,20 @@
 
 <div class="location_name">
 <div class="d-flex justify-content-center">
-<%= @random_location.name%>
+<%= @random_location.name if @random_location.name.present? %>
 </div>
 </div>
 
 <div id="img_location">
 <div class="d-flex justify-content-center">
-<%= image_tag @random_location.pictures.first %>
+<%= image_tag @random_location.pictures.first  if @random_location.pictures.first.present?%>
 </div>
 </div>
 
 <div id="location_border">
 <div id="description_location">
 <div class="d-flex justify-content-start">
-<%=  @random_location.description %>
+<%=  @random_location.description if @random_location.description.present? %>
 </div>
 </div>
 </div>
