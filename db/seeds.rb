@@ -7,4 +7,3 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-# Attraction.creaete(image: "s3 link")

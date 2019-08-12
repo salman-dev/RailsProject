@@ -2,8 +2,8 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # added stripe
-  config.stripe.secret_key = Rails.application.credentials.stripe[:development][:secret_key]
-  config.stripe.publishable_key = Rails.application.credentials.stripe[:development][:publishable_key]
+  # config.stripe.secret_key = Rails.application.credentials.stripe[:development][:secret_key]
+  # config.stripe.publishable_key = Rails.application.credentials.stripe[:development][:publishable_key]
 
   
   # In the development environment your application's code is reloaded on

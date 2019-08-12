@@ -7,7 +7,7 @@
   <%= link_to 'GMIT', root_path ,:class => "navbar-brand test"%>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <span class="n2avbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -18,6 +18,10 @@
           <% else %>
             <%= link_to 'Sign in / sign up', new_user_session_path, :class => 'text-light'%> 
           <% end %>
+      </li>
+
+      <li>
+        <%# <%= link_to 'Location', location_path %> %>
       </li>
     </ul>
 
