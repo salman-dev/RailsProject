@@ -1,42 +1,3 @@
-
-
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-* System dependencies
-* Configuration
-* Database creation
-* Database initialization
-* How to run the test suite
-* Services (job queues, cache servers, search engines, etc.)
-* Deployment instructions
-* ...
-
-
-
-Heroku (published app) -
-https://gmitt.herokuapp.com/
-
-GitHub repository 
-https://github.com/salman-dev/RailsProject
-
-
-
-- Description of your project, including,
-
-- - Problem definition / purpose
-  - Functionality / features
-  - Screenshots
-  - Tech stack (e.g. html, css, deployment platform, etc)
-  - Instructions on how to setup, configure and use your *App*.
-
-
-
 **GMIT (Give me ideas to travel)**
 
 The purpose of GMIT is to allow people to find places to travel when they don't know where to visit on their next trip. 
@@ -112,6 +73,10 @@ we did this using Trello board we had user stories
 ![TRELLO 2]([https://github.com/salman-dev/RailsProject/blob/dev/Trello%20photo/day6.png](https://github.com/salman-dev/RailsProject/blob/dev/Trello photo/day6.png))
 
 ![TRELLO 3]([https://github.com/salman-dev/RailsProject/blob/dev/Trello%20photo/trello4.png](https://github.com/salman-dev/RailsProject/blob/dev/Trello photo/trello4.png))
+
+<u>**Entity Relationship Database**</u>
+
+![TRELLO 3](/home/phillip/Desktop/railsproj/RailsProject/%5Bhttps:/github.com/salman-dev/RailsProject/blob/dev/Trello%20photo/trello4.png%5D(https:/github.com/salman-dev/RailsProject/blob/dev/Trello%20photo/trello4.png))
 
 
 
