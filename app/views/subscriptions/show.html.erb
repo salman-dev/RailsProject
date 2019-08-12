@@ -10,15 +10,12 @@
   <%= @subscription.description %>
 </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @subscription.image %>
-</p>
+  <p>
+    <strong>Image:</strong>
+    <%= image_tag @subscription.image %>
+  </p>
 
-<p>
-  <strong>Profile:</strong>
-  <%= @subscription.profile %>
-</p>
+
 
 <%= link_to 'Edit', edit_subscription_path(@subscription) %> |
 <%= link_to 'Back', subscriptions_path %>
