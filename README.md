@@ -107,6 +107,12 @@ After creating the base of the application we added more features and a bit of s
 
 we did this using Trello board we had user stories
 
+![TRELLO 1]([https://github.com/salman-dev/RailsProject/blob/dev/Trello%20photo/Trelloday3%20.png](https://github.com/salman-dev/RailsProject/blob/dev/Trello photo/Trelloday3 .png))
+
+![TRELLO 2]([https://github.com/salman-dev/RailsProject/blob/dev/Trello%20photo/day6.png](https://github.com/salman-dev/RailsProject/blob/dev/Trello photo/day6.png))
+
+![TRELLO 3]([https://github.com/salman-dev/RailsProject/blob/dev/Trello%20photo/trello4.png](https://github.com/salman-dev/RailsProject/blob/dev/Trello photo/trello4.png))
+
 
 
 <u>**Wire Frames**</u>
