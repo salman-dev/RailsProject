@@ -5,12 +5,17 @@ class AttractionsController < ApplicationController
   # GET /attractions.json
   def index
     @attractions = Attraction.all
+    @profile = Profile.find_by(id: session[:profie_id])
+    @profile_wishlists = @profile.wishlists
+
+    @wishlist = Wishlist.find_by_id(params[:wishlist_id])
     
   end
 
   # GET /attractions/1
   # GET /attractions/1.json
   def show
+    @attraction = Attraction.find_by(id: params[:id])
   end
 
   # GET /attractions/new
@@ -20,6 +25,7 @@ class AttractionsController < ApplicationController
 
   # GET /attractions/1/edit
   def edit
+    @attraction = Attraction.find_by(id: params[:id])
   end
 
   # POST /attractions
@@ -27,38 +33,54 @@ class AttractionsController < ApplicationController
   def create
     @attraction = Attraction.new(attraction_params)
 
-    respond_to do |format|
-      if @attraction.save
-        format.html { redirect_to @attraction, notice: 'Attraction was successfully created.' }
-        format.json { render :show, status: :created, location: @attraction }
-      else
-        format.html { render :new }
-        format.json { render json: @attraction.errors, status: :unprocessable_entity }
-      end
+    if @attraction.save
+      redirect_to @attraction
+    else
+      render 'new'
     end
+
+    # respond_to do |format|
+    #   if @attraction.save
+    #     format.html { redirect_to @attraction, notice: 'Attraction was successfully created.' }
+    #     format.json { render :show, status: :created, location: @attraction }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @attraction.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /attractions/1
   # PATCH/PUT /attractions/1.json
   def update
-    respond_to do |format|
-      if @attraction.update(attraction_params)
-        format.html { redirect_to @attraction, notice: 'Attraction was successfully updated.' }
-        format.json { render :show, status: :ok, location: @attraction }
-      else
-        format.html { render :edit }
-        format.json { render json: @attraction.errors, status: :unprocessable_entity }
-      end
+    @attraction = Attraction.find_by(id: params[:id])
+    if @attraction.update(product_params)
+      redirect_to @attraction
+    else
+      render 'edit'
     end
+
+    # respond_to do |format|
+    #   if @attraction.update(attraction_params)
+    #     format.html { redirect_to @attraction, notice: 'Attraction was successfully updated.' }
+    #     format.json { render :show, status: :ok, location: @attraction }
+    #   else
+    #     format.html { render :edit }
+    #     format.json { render json: @attraction.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # DELETE /attractions/1
   # DELETE /attractions/1.json
   def destroy
-    @attraction.destroy
-    respond_to do |format|
-      format.html { redirect_to attractions_url, notice: 'Attraction was successfully destroyed.' }
-      format.json { head :no_content }
+    Attraction.find(params[:id]).destroy
+    flash[:success] = "You have deleted this attraction"
+    redirect_to root_path
+    # @attraction.destroy
+    # respond_to do |format|
+    #   format.html { redirect_to attractions_url, notice: 'Attraction was successfully destroyed.' }
+    #   format.json { head :no_content }
     end
   end
 
